@@ -11,3 +11,5 @@ To-do:
 4-Control Signals for BTF/More Simulation for BTF
 
 5-Control Unit for Operation
+
+6-Apply <a href="https://tches.iacr.org/index.php/TCHES/article/view/8544">this technique</a> to butterfly unit
