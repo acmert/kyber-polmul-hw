@@ -1,7 +1,6 @@
 from math import log,ceil
 from random import randint
 
-from generate_prime import *
 from helper import *
 
 # ----------------------------------------------------------
@@ -294,10 +293,10 @@ else:
 # Print memory structure
 def PrintBRAM(BRAM,ring=0,findeg=1):
     if ring == 0:
-        v = int(math.log(n//findeg, 2))
+        v = int(log(n//findeg, 2))
         m = n//PE
     else:
-        v = int(math.log((3*n)//findeg, 2))-1
+        v = int(log((3*n)//findeg, 2))-1
         m = (3*n)//PE
     BS = ""
     for j in range(v):
@@ -322,10 +321,10 @@ def PrintBRAM(BRAM,ring=0,findeg=1):
 
 def PrintBRTW(BRTW,ring=0,findeg=1):
     if ring == 0:
-        v = int(math.log(n//findeg, 2))
+        v = int(log(n//findeg, 2))
         m = n//PE
     else:
-        v = int(math.log((3*n)//findeg, 2))-1
+        v = int(log((3*n)//findeg, 2))-1
         m = (3*n)//PE
     TS = ""
     for j in range(v):
@@ -388,14 +387,14 @@ for mi0,mi1,mo0 in zip(A,B_ntt,C_nwc1):
     KYBER_DIN1_TXT.write(hex(mi1).replace("L","")[2:]+"\n")
     KYBER_DOUT_TXT.write(hex(mo0).replace("L","")[2:]+"\n")
 # Twiddle factor
-v = int(math.log(n//2, 2))
+v = int(log(n//2, 2))
 m = n//PE
 for j in range(v):
     for k in range(0,m,max(1,m>>j)):
         for i in range(PE//2):
             KYBER_W_TXT.write(hex(pow(w,N0TW[i][j][k],q)).replace("L","")[2:]+"\t  ")
         KYBER_W_TXT.write("\n")
-v = int(math.log(n//2, 2))
+v = int(log(n//2, 2))
 m = n//PE
 for j in range(v):
     for k in range(0,m,max(1,m>>(v-j-1))):
