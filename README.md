@@ -1,5 +1,12 @@
 # kyber-polmul-hw
 
+3 variants will be implemented:
+* A Hardware with 1 Butterfly unit (Low-cost)
+
+* A Hardware with 4 Butterfly unit (Balanced)
+
+* A Hardware with 16 Butterfly unit (High-performance)
+
 To-do:
 
 1-Use Wallace Tree in Mod3329 module
