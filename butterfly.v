@@ -27,11 +27,13 @@ wire [11:0] w0,w1;
 wire [11:0] w2,w3;
 reg  [11:0] w2r0,w3r0;
 reg  [11:0] w2r1,w2r2;
+wire [11:0] w2r1d2;
 wire [11:0] w4;
 reg  [11:0] Wr0;
 wire [11:0] Ww;
 wire [11:0] w5;
 reg  [11:0] w5r0;
+wire [11:0] w5r0d2;
 wire [11:0] w6;
 reg  [11:0] w6r0;
 wire [11:0] w7;
@@ -64,8 +66,10 @@ always @(posedge clk or posedge rst) begin
     if(rst)
         {w2r1,w2r2} <= 24'd0;
     else
-        {w2r1,w2r2} <= {w2r0,w2r1};
+        {w2r1,w2r2} <= {w2r0,w2r1d2};
 end
+
+div2 d0(w2r1,w2r1d2);
 
 assign w7 = (CT) ? w2r0 : w2r2;
 
@@ -89,7 +93,9 @@ always @(posedge clk or posedge rst) begin
         w5r0 <= w5;
 end
 
-assign w6 = (CT) ? w3r0 : w5r0;
+div2 d1(w5r0,w5r0d2);
+
+assign w6 = (CT) ? w3r0 : w5r0d2;
 
 always @(posedge clk or posedge rst) begin
     if(rst)
