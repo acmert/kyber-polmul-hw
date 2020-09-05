@@ -246,10 +246,10 @@ def HalfModPolMul(A,B_ntt,w,w_inv,q):
         C_ntt[2*i:2*i+2] = PolWiseMult(A_ntt[2*i:2*i+2],B_ntt[2*i:2*i+2],wk,2,q)
 
         KYBER_WP_TXT.write(hex(wk).replace("L","")[2:]+"\n")
-        KYBER_DOUT_COEFMUL_TXT_DEBUG.write("(A["+str(2*i)+":"+str(2*i+2-1)+"]="+str(A_ntt[2*i:2*i+2])+", ".ljust(5)+ \
-                                            "B["+str(2*i)+":"+str(2*i+2-1)+"]="+str(B_ntt[2*i:2*i+2])+", ".ljust(5)+ \
-                                            "W:"+str(wk)+") --> ".ljust(5) + \
-                                            "C["+str(2*i)+":"+str(2*i+2-1)+"]="+str(C_ntt[2*i:2*i+2])+"\n")
+        KYBER_DOUT_COEFMUL_TXT_DEBUG.write(("(A[{}:{}]=".format(2*i,2*i+2-1)).ljust(14)+("[{},{}], ".format(hex(A_ntt[2*i]).rstrip("L")[2:],hex(A_ntt[2*i+1]).rstrip("L")[2:])).ljust(14) + \
+                                            ("B[{}:{}]=".format(2*i,2*i+2-1)).ljust(14)+("[{},{}], ".format(hex(B_ntt[2*i]).rstrip("L")[2:],hex(B_ntt[2*i+1]).rstrip("L")[2:])).ljust(14) + \
+                                            ("W:{}) --> ".format(hex(wk).rstrip("L")[2:])).ljust(5) + \
+                                            ("C[{}:{}]=".format(2*i,2*i+2-1)).ljust(14)+"[{},{}]\n".format(hex(C_ntt[2*i]).rstrip("L")[2:],hex(C_ntt[2*i+1]).rstrip("L")[2:]))
 
     for cn in C_ntt:
         KYBER_DOUT_MINTT_TXT.write(hex(cn).replace("L","")[2:]+"\n")
