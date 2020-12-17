@@ -37,8 +37,8 @@ module KyberHPM1PE #(parameter PE_NUMBER=1,
                    input                         read_a,read_b,
                    input                         start_ab,
                    input                         start_fntt,start_pwm2,start_intt,
-                   input      [12*PE_NUMBER-1:0] din,  // 0,1,2,3
-                   output reg [12*PE_NUMBER-1:0] dout, // 0,1,2,3
+                   input      [12*PE_NUMBER-1:0] din,
+                   output reg [12*PE_NUMBER-1:0] dout, 
                    output reg                    done
                );
 // ---------------------------------------------------------------- connections
