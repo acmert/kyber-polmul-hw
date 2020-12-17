@@ -1,0 +1,8 @@
+11	  cf0	  ac9	  238	  247	  aba	  a59	  2a8	  665	  69c	  2d3	  a2e	  8f0	  411	  44c	  8b5
+581	  780	  a66	  29b	  cd1	  30	  e9	  c18	  2f4	  a0d	  86c	  495	  bc7	  13a	  bea	  117
+6a7	  65a	  673	  68e	  ae5	  21c	  6fd	  604	  737	  5ca	  3b8	  949	  5b5	  74c	  a7f	  282
+3ab	  956	  904	  3fd	  985	  37c	  954	  3ad	  2dd	  a24	  921	  3e0	  10c	  bf5	  281	  a80
+630	  6d1	  8fa	  407	  7f5	  50c	  c94	  6d	  177	  b8a	  9f5	  30c	  82a	  4d7	  66d	  694
+427	  8da	  13f	  bc2	  ad5	  22c	  2f5	  a0c	  833	  4ce	  231	  ad0	  9a2	  35f	  a22	  2df
+af4	  20d	  444	  8bd	  193	  b6e	  402	  8ff	  477	  88a	  866	  49b	  ad7	  22a	  376	  98b
+6ba	  647	  4bc	  845	  752	  5af	  405	  8fc	  83e	  4c3	  b77	  18a	  375	  98c	  86a	  497
