@@ -44,10 +44,10 @@ reg [11:0] doub	[0:255];
 
 initial begin
 	// ntt
-	$readmemh("../../../../test/KYBER_DIN0.txt" , dina);
-	$readmemh("../../../../test/KYBER_DIN1.txt" , dinb);
-	$readmemh("../../../../test/KYBER_DIN0_MFNTT.txt" , doua);
-	$readmemh("../../../../test/KYBER_DIN1_MFNTT.txt" , doub);
+	$readmemh("../../../../test_pe1/KYBER_DIN0.txt" , dina);
+	$readmemh("../../../../test_pe1/KYBER_DIN1.txt" , dinb);
+	$readmemh("../../../../test_pe1/KYBER_DIN0_MFNTT.txt" , doua);
+	$readmemh("../../../../test_pe1/KYBER_DIN1_MFNTT.txt" , doub);
 end
 
 // ---------------------------------------------------------------- TEST case
