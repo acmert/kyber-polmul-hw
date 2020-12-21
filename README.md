@@ -13,9 +13,9 @@ The repo includes the following files:
     <li><code>KyberHPM1PE.v</code> - top module</li>
     <li><code>KyberHPM1PE_test_ALL_FULL.v</code> - testbench for full polynomial multiplication</li>
     <li><code>KyberHPM1PE_test_ALL_HALF.v</code> - testbench for half polynomial multiplication</li>
-    <li><code>KyberHPM1PE_test_ALL_FNTT.v</code> - testbench for forward NTT operation</li>
-    <li><code>KyberHPM1PE_test_ALL_INTT.v</code> - testbench for inverse NTT operation</li>
-    <li><code>KyberHPM1PE_test_ALL_PWM2.v</code> - testbench for coefficient-wise multiplication operation</li>
+    <li><code>KyberHPM1PE_test_FNTT.v</code> - testbench for forward NTT operation</li>
+    <li><code>KyberHPM1PE_test_INTT.v</code> - testbench for inverse NTT operation</li>
+    <li><code>KyberHPM1PE_test_PWM2.v</code> - testbench for coefficient-wise multiplication operation</li>
   </ul>
 <li>pe4 - Hardware implementation with 4 butterfly units</li>
 <li>pe16 - Hardware implementation with 16 butterfly units</li>
