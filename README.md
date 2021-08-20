@@ -2,7 +2,7 @@
 
 Hardware implementation of polynomial multiplication operation of CRYSTALS-KYBER PQC scheme (the implementations are for academic research only and does not come with any support or any responsibility.)
 
-Paper: TBA
+Paper: https://ieeexplore.ieee.org/abstract/document/9474139
 
 # Files
 
