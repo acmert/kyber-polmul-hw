@@ -236,15 +236,16 @@ for PE_NUMBER,FILE_NAME in zip(PE_NUMBER_LIST,FILE_NAME_LIST):
 
     def HalfModPolMul(A,B_ntt,w,w_inv,q):
         # print("---- NTT(A)")
+        N = len(A)
         A_ntt,ABR,ATW = CRT_Iterative_NWC_FD2_NR(A,w,q,TESTEN=False,TESTNUM="DIN0")
 
-        C_ntt = [0 for _ in range(256)]
+        C_ntt = [0 for _ in range(N)]
 
         if VERBOSE: print("---- Coefficient-wise multiplication:")
         KYBER_DOUT_COEFMUL_TXT_DEBUG = open(FILE_NAME+"/debug/KYBER_DOUT_COEFMUL_DEBUG.txt","w")
         # Degree-2 modular polynomial multiplications
-        for i in range(128):
-            w_pow = 2*intReverse(i,7)+1
+        for i in range(N//2):
+            w_pow = 2*intReverse(i,int(log(N//2,2)))+1
             if VERBOSE: print("W: "+str(w_pow).ljust(5)+" A: {}".format(range(2*i,2*i+2)))
 
             wk    = pow(w,w_pow,q)
